@@ -1,0 +1,14 @@
+2015.04.24 15:56:13.052 EEST INFO: *** SYSTEM START ***
+2015.04.24 15:56:15.445 EEST WARNING: [Local Folder Repository] The specified file must be a directory. (/home/panos/NetBeansProjects/SemPathService/plugins/edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2015.04.24 15:56:15.460 EEST INFO: Loading triples -- ProtegeOWLParser.loadTriples()
+2015.04.24 15:56:16.130 EEST INFO: Start processing ontology: http://dummy-ontologies.com/dummy.owl Time: Fri Apr 24 15:56:16 EEST 2015 -- ProtegeOWLParser.loadTriples()
+2015.04.24 15:57:07.130 EEST INFO: *** SYSTEM START ***
+2015.04.24 15:57:07.655 EEST WARNING: [Local Folder Repository] The specified file must be a directory. (/home/panos/NetBeansProjects/SemPathService/plugins/edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2015.04.24 15:57:07.670 EEST INFO: Loading triples -- ProtegeOWLParser.loadTriples()
+2015.04.24 15:57:07.760 EEST INFO: Start processing ontology: http://dummy-ontologies.com/dummy.owl Time: Fri Apr 24 15:57:07 EEST 2015 -- ProtegeOWLParser.loadTriples()
+2015.04.24 15:58:05.987 EEST INFO: *** SYSTEM START ***
+2015.04.24 15:58:06.524 EEST WARNING: [Local Folder Repository] The specified file must be a directory. (/home/panos/NetBeansProjects/SemPathService/plugins/edu.stanford.smi.protegex.owl) -- LocalFolderRepository.update()
+2015.04.24 15:58:06.540 EEST INFO: Loading triples -- ProtegeOWLParser.loadTriples()
+2015.04.24 15:58:06.631 EEST INFO: Start processing ontology: http://dummy-ontologies.com/dummy.owl Time: Fri Apr 24 15:58:06 EEST 2015 -- ProtegeOWLParser.loadTriples()
+2015.04.24 16:00:10.502 EEST WARNING: The system cannot find the ontology http://www.w3.org/2003/11/swrlb in any of the repositories. This import will be ignored. -- UnresolvedImportUIHandler.handleUnresolvableImport()
+2015.04.24 16:00:10.502 EEST WARNING: [ProtegeOWLParser] Warning: Ignoring import http://www.w3.org/2003/11/swrlb -- DefaultProtegeOWLParserLogger.logWarning()

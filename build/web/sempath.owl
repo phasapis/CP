@@ -1,0 +1,2221 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns="http://www.owl-ontologies.com/SemPath.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://www.owl-ontologies.com/SemPath.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrlb"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/11/swrl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Patient">
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://www.w3.org/2003/11/swrl#Atom">
+        <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+        <owl:disjointWith>
+          <rdf:Description rdf:about="http://www.w3.org/2003/11/swrl#Builtin">
+            <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+            <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Atom"/>
+            <owl:disjointWith>
+              <rdf:Description rdf:about="http://www.w3.org/2003/11/swrl#Imp">
+                <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Atom"/>
+                <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+                <owl:disjointWith>
+                  <rdf:Description rdf:about="http://www.w3.org/2003/11/swrl#Variable">
+                    <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Atom"/>
+                    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+                    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+                    <owl:disjointWith>
+                      <owl:Class rdf:ID="ClinicalPath"/>
+                    </owl:disjointWith>
+                    <owl:disjointWith>
+                      <owl:Class rdf:ID="ClinicalPathStep"/>
+                    </owl:disjointWith>
+                    <owl:disjointWith rdf:resource="#Patient"/>
+                    <owl:disjointWith>
+                      <owl:Class rdf:ID="PatientState"/>
+                    </owl:disjointWith>
+                  </rdf:Description>
+                </owl:disjointWith>
+                <owl:disjointWith>
+                  <owl:Class rdf:about="#ClinicalPath"/>
+                </owl:disjointWith>
+                <owl:disjointWith>
+                  <owl:Class rdf:about="#ClinicalPathStep"/>
+                </owl:disjointWith>
+                <owl:disjointWith rdf:resource="#Patient"/>
+                <owl:disjointWith>
+                  <owl:Class rdf:about="#PatientState"/>
+                </owl:disjointWith>
+              </rdf:Description>
+            </owl:disjointWith>
+            <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+            <owl:disjointWith>
+              <owl:Class rdf:about="#ClinicalPath"/>
+            </owl:disjointWith>
+            <owl:disjointWith>
+              <owl:Class rdf:about="#ClinicalPathStep"/>
+            </owl:disjointWith>
+            <owl:disjointWith rdf:resource="#Patient"/>
+            <owl:disjointWith>
+              <owl:Class rdf:about="#PatientState"/>
+            </owl:disjointWith>
+          </rdf:Description>
+        </owl:disjointWith>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+        <owl:disjointWith>
+          <owl:Class rdf:about="#ClinicalPath"/>
+        </owl:disjointWith>
+        <owl:disjointWith>
+          <owl:Class rdf:about="#ClinicalPathStep"/>
+        </owl:disjointWith>
+        <owl:disjointWith rdf:resource="#Patient"/>
+        <owl:disjointWith>
+          <owl:Class rdf:about="#PatientState"/>
+        </owl:disjointWith>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ClinicalPath"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ClinicalPathStep"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#PatientState"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="ValuePatientState">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#PatientState"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#PatientState">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ClinicalPathStep"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <owl:disjointWith rdf:resource="#Patient"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ClinicalPath"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Atom"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Diagnosis"/>
+  <owl:Class rdf:about="#ClinicalPathStep">
+    <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ClinicalPath"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#PatientState"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Atom"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <owl:disjointWith rdf:resource="#Patient"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ClinicalPath">
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+    <owl:disjointWith rdf:resource="#Patient"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <owl:disjointWith rdf:resource="#PatientState"/>
+    <owl:disjointWith rdf:resource="#ClinicalPathStep"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/2003/11/swrl#Atom"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasClinicalPathStep">
+    <rdfs:range rdf:resource="#ClinicalPathStep"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasRelevantState">
+    <rdfs:domain rdf:resource="#ClinicalPathStep"/>
+    <rdfs:range rdf:resource="#PatientState"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPossibleDiagnosis">
+    <rdfs:domain rdf:resource="#Patient"/>
+    <rdfs:range rdf:resource="#Diagnosis"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasDiagnosis">
+    <rdfs:range rdf:resource="#Diagnosis"/>
+    <rdfs:domain rdf:resource="#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPatient">
+    <rdfs:range rdf:resource="#Patient"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasClinicalPath"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="#ClinicalPath"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasClinicalPath">
+    <owl:inverseOf rdf:resource="#hasPatient"/>
+    <rdfs:range rdf:resource="#ClinicalPath"/>
+    <rdfs:domain rdf:resource="#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPatientState">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasFinishedStep"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="#PatientState"/>
+    <rdfs:domain rdf:resource="#Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasFinishedStep">
+    <rdfs:domain rdf:resource="#ClinicalPath"/>
+    <rdfs:range rdf:resource="#ClinicalPathStep"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2003/11/swrl#argument2"/>
+  <owl:ObjectProperty rdf:ID="hasPendingStep">
+    <rdfs:range rdf:resource="#ClinicalPathStep"/>
+    <rdfs:domain rdf:resource="#ClinicalPath"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="isFinished">
+    <rdfs:domain rdf:resource="#ClinicalPathStep"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+            >false</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+          >true</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasJBPMProcess">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ClinicalPathStep"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasWebServiceURL">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ClinicalPathStep"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasName">
+    <rdfs:domain rdf:resource="#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasEndTime">
+    <rdfs:domain rdf:resource="#ClinicalPathStep"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasStartTime">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#ClinicalPathStep"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="hasOrder">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#ClinicalPathStep"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#ValuePatientState"/>
+  </owl:FunctionalProperty>
+  <ValuePatientState rdf:ID="Temperature"/>
+  <swrl:Imp rdf:ID="HL17">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2>
+              <ClinicalPathStep rdf:ID="PetScan">
+                <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >PetScan</hasJBPMProcess>
+                <hasRelevantState>
+                  <PatientState rdf:ID="PetScanPositive"/>
+                </hasRelevantState>
+                <hasRelevantState>
+                  <PatientState rdf:ID="PetScanNegative"/>
+                </hasRelevantState>
+                <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >http://localhost:8080/SemPathService/PetScan.jsp</hasWebServiceURL>
+              </ClinicalPathStep>
+            </swrl:argument2>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="c"/>
+            </swrl:argument1>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="p"/>
+            </swrl:argument1>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2>
+                  <Diagnosis rdf:ID="HodgkinLemphomaStageIIa"/>
+                </swrl:argument2>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:BuiltinAtom>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                <swrl:arguments>
+                                  <rdf:List>
+                                    <rdf:first>
+                                      <swrl:Variable rdf:ID="v2"/>
+                                    </rdf:first>
+                                    <rdf:rest>
+                                      <rdf:List>
+                                        <rdf:first rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >3</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      </rdf:List>
+                                    </rdf:rest>
+                                  </rdf:List>
+                                </swrl:arguments>
+                              </swrl:BuiltinAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first>
+                                      <swrl:IndividualPropertyAtom>
+                                        <swrl:argument1 rdf:resource="#p"/>
+                                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                                        <swrl:argument2 rdf:resource="#c"/>
+                                      </swrl:IndividualPropertyAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                  <swrl:DatavaluedPropertyAtom>
+                                    <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                                    <swrl:argument1 rdf:resource="#PetScan"/>
+                                    <swrl:argument2 rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#int"
+                                    >0</swrl:argument2>
+                                  </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument2 rdf:resource="#v2"/>
+                            <swrl:argument1>
+                              <ClinicalPathStep rdf:ID="IrradiationCycle">
+                                <hasJBPMProcess rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >IrradiationCycle</hasJBPMProcess>
+                                <hasWebServiceURL rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >http://localhost:8080/SemPathService/IrradiationCycle.jsp</hasWebServiceURL>
+                              </ClinicalPathStep>
+                            </swrl:argument1>
+                            <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:BuiltinAtom>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                        <swrl:arguments>
+                          <rdf:List>
+                            <rdf:first>
+                              <swrl:Variable rdf:ID="v1"/>
+                            </rdf:first>
+                            <rdf:rest>
+                              <rdf:List>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >3</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </rdf:List>
+                            </rdf:rest>
+                          </rdf:List>
+                        </swrl:arguments>
+                      </swrl:BuiltinAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument1>
+                      <ClinicalPathStep rdf:ID="ChemCycle">
+                        <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >http://localhost:8080/SemPathService/ChemCycle.jsp</hasWebServiceURL>
+                        <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >ChemCycle</hasJBPMProcess>
+                      </ClinicalPathStep>
+                    </swrl:argument1>
+                    <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                    <swrl:argument2 rdf:resource="#v1"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL3">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2>
+              <ClinicalPathStep rdf:ID="ClinicalExamination">
+                <hasRelevantState>
+                  <PatientState rdf:ID="FluidGlands"/>
+                </hasRelevantState>
+                <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >ClinicalExamination</hasJBPMProcess>
+                <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >http://localhost:8080/SemPathService/ClinicalExamination.jsp</hasWebServiceURL>
+                <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >0</hasOrder>
+              </ClinicalPathStep>
+            </swrl:argument2>
+            <swrl:argument1 rdf:resource="#c"/>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;
+      dsfdsffa&lt;sup&gt;sdas&lt;/sup&gt;
+    &lt;/p&gt;</rdfs:comment>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                        >0</swrl:argument2>
+                        <swrl:argument1 rdf:resource="#ClinicalExamination"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                    <swrl:argument2 rdf:resource="#c"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2>
+                  <Diagnosis rdf:ID="HodgkinLemphoma"/>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Variable rdf:ID="v"/>
+  <Diagnosis rdf:ID="HodgkinLemphomaStageIIb"/>
+  <ValuePatientState rdf:ID="HT"/>
+  <ValuePatientState rdf:ID="Fe"/>
+  <swrl:Imp rdf:ID="HL8">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#p"/>
+                        <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                        <swrl:argument2>
+                          <PatientState rdf:ID="MarrowBiopsyNegative"/>
+                        </swrl:argument2>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument2>
+                              <PatientState rdf:ID="LowFever"/>
+                            </swrl:argument2>
+                            <swrl:argument1 rdf:resource="#p"/>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:argument2>
+                      <PatientState rdf:ID="GlandBiopsyPositive"/>
+                    </swrl:argument2>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                <swrl:argument2>
+                  <ValuePatientState rdf:ID="ChemCycleNumber">
+                    <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                    >0.0</hasValue>
+                  </ValuePatientState>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#p"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:argument2>
+                      <ValuePatientState rdf:ID="IrradiationCycleNumber">
+                        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                        >0.0</hasValue>
+                      </ValuePatientState>
+                    </swrl:argument2>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+            <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <PatientState rdf:ID="Kathizisi"/>
+  <ValuePatientState rdf:ID="GlandsSize"/>
+  <PatientState rdf:ID="Cough"/>
+  <Diagnosis rdf:ID="HodgkinLemphomaStageIIIa"/>
+  <ClinicalPathStep rdf:ID="X-Ray">
+    <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://localhost:8080/SemPathService/X-Ray.jsp</hasWebServiceURL>
+    <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</hasOrder>
+    <hasRelevantState>
+      <PatientState rdf:ID="ShadowInChestArea"/>
+    </hasRelevantState>
+    <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >X-Ray</hasJBPMProcess>
+  </ClinicalPathStep>
+  <swrl:Imp rdf:ID="HL7">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+                                    >1.2</rdf:first>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </rdf:List>
+                                </rdf:rest>
+                                <rdf:first rdf:resource="#v"/>
+                              </rdf:List>
+                            </swrl:arguments>
+                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:DatavaluedPropertyAtom>
+                                        <swrl:argument2 rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >0</swrl:argument2>
+                                        <swrl:argument1>
+                                          <ClinicalPathStep rdf:ID="MarrowBiopsy">
+                                            <hasWebServiceURL
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >http://localhost:8080/SemPathService/MarrowBiopsy.jsp</hasWebServiceURL>
+                                            <hasRelevantState>
+                                              <PatientState rdf:ID="MarrowBiopsyPositive"/>
+                                            </hasRelevantState>
+                                            <hasRelevantState rdf:resource="#MarrowBiopsyNegative"/>
+                                            <hasOrder rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >0</hasOrder>
+                                            <hasJBPMProcess rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >MarrowBiopsy</hasJBPMProcess>
+                                          </ClinicalPathStep>
+                                        </swrl:argument1>
+                                        <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                                      </swrl:DatavaluedPropertyAtom>
+                                    </rdf:first>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                  <swrl:DatavaluedPropertyAtom>
+                                    <swrl:argument1>
+                                      <ClinicalPathStep rdf:ID="GlandBiopsy">
+                                        <hasOrder rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >0</hasOrder>
+                                        <hasRelevantState>
+                                          <PatientState rdf:ID="GlandBiopsyNegative"/>
+                                        </hasRelevantState>
+                                        <hasRelevantState rdf:resource="#GlandBiopsyPositive"/>
+                                        <hasWebServiceURL rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >http://localhost:8080/SemPathService/GlandBiopsy.jsp</hasWebServiceURL>
+                                        <hasJBPMProcess rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >GlandBiopsy</hasJBPMProcess>
+                                      </ClinicalPathStep>
+                                    </swrl:argument1>
+                                    <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                                    <swrl:argument2 rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#int"
+                                    >0</swrl:argument2>
+                                  </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="#c"/>
+                                <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                                <swrl:argument1 rdf:resource="#p"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument1 rdf:resource="#GlandsSize"/>
+                        <swrl:argument2 rdf:resource="#v"/>
+                        <swrl:propertyPredicate rdf:resource="#hasValue"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#GlandsSize"/>
+                    <swrl:argument1 rdf:resource="#p"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#c"/>
+                <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+                <swrl:argument2 rdf:resource="#MarrowBiopsy"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#c"/>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument2 rdf:resource="#GlandBiopsy"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <PatientState rdf:ID="Fatigue"/>
+  <PatientState rdf:ID="DryThroat"/>
+  <ClinicalPathStep rdf:ID="AdvancedChemiotherapy">
+    <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://localhost:8080/SemPathService/AdvancedChemiotherapy.jsp</hasWebServiceURL>
+    <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AdvancedChemiotherapy</hasJBPMProcess>
+  </ClinicalPathStep>
+  <PatientState rdf:ID="LowWhiteBloodCells"/>
+  <ValuePatientState rdf:ID="BloodPressure">
+    <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >13.0</hasValue>
+  </ValuePatientState>
+  <swrl:Variable rdf:ID="z"/>
+  <swrl:Imp rdf:ID="HL2">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+            <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#LowFever"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                <swrl:argument2 rdf:resource="#c"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL16">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument1 rdf:resource="#ChemCycle"/>
+                    <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                    <swrl:argument2 rdf:resource="#v1"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:BuiltinAtom>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                        <swrl:arguments>
+                          <rdf:List>
+                            <rdf:first rdf:resource="#v1"/>
+                            <rdf:rest>
+                              <rdf:List>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >3</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </rdf:List>
+                            </rdf:rest>
+                          </rdf:List>
+                        </swrl:arguments>
+                      </swrl:BuiltinAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument2 rdf:resource="#v2"/>
+                            <swrl:argument1 rdf:resource="#IrradiationCycle"/>
+                            <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:BuiltinAtom>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                  <rdf:List>
+                                    <rdf:rest>
+                                      <rdf:List>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        <rdf:first rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#int"
+                                        >3</rdf:first>
+                                      </rdf:List>
+                                    </rdf:rest>
+                                    <rdf:first rdf:resource="#v2"/>
+                                  </rdf:List>
+                                </swrl:arguments>
+                              </swrl:BuiltinAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:IndividualPropertyAtom>
+                                    <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                                    <swrl:argument2 rdf:resource="#c"/>
+                                    <swrl:argument1 rdf:resource="#p"/>
+                                  </swrl:IndividualPropertyAtom>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument2 rdf:resource="#IrradiationCycle"/>
+            <swrl:argument1 rdf:resource="#c"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL13">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2>
+              <ClinicalPathStep rdf:ID="WhiteBloodCellsInjection">
+                <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >http://localhost:8080/SemPathService/WhiteBloodCellsInjection.jsp</hasWebServiceURL>
+                <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >WhiteBloodCellsInjection</hasJBPMProcess>
+              </ClinicalPathStep>
+            </swrl:argument2>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument1 rdf:resource="#c"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#c"/>
+                <swrl:argument2>
+                  <ClinicalPathStep rdf:ID="BloodTest">
+                    <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >http://localhost:8080/SemPathService/BloodTest.jsp</hasWebServiceURL>
+                    <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >BloodTest</hasJBPMProcess>
+                    <hasRelevantState>
+                      <ValuePatientState rdf:ID="WhiteBloodCells"/>
+                    </hasRelevantState>
+                    <hasRelevantState rdf:resource="#Fe"/>
+                    <hasRelevantState>
+                      <ValuePatientState rdf:ID="MCHb"/>
+                    </hasRelevantState>
+                    <hasRelevantState rdf:resource="#HT"/>
+                  </ClinicalPathStep>
+                </swrl:argument2>
+                <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                            <swrl:argument1 rdf:resource="#p"/>
+                            <swrl:argument2 rdf:resource="#WhiteBloodCells"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:BuiltinAtom>
+                                    <swrl:arguments>
+                                      <rdf:List>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            <rdf:first rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >4000</rdf:first>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                        <rdf:first rdf:resource="#v2"/>
+                                      </rdf:List>
+                                    </swrl:arguments>
+                                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                  </swrl:BuiltinAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first>
+                                      <swrl:IndividualPropertyAtom>
+                                        <swrl:argument1 rdf:resource="#p"/>
+                                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                                        <swrl:argument2 rdf:resource="#c"/>
+                                      </swrl:IndividualPropertyAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:DatavaluedPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#hasValue"/>
+                                <swrl:argument1 rdf:resource="#WhiteBloodCells"/>
+                                <swrl:argument2 rdf:resource="#v2"/>
+                              </swrl:DatavaluedPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:BuiltinAtom>
+                        <swrl:arguments>
+                          <rdf:List>
+                            <rdf:rest>
+                              <rdf:List>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >3</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </rdf:List>
+                            </rdf:rest>
+                            <rdf:first rdf:resource="#v1"/>
+                          </rdf:List>
+                        </swrl:arguments>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                      </swrl:BuiltinAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument2 rdf:resource="#v1"/>
+                    <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                    <swrl:argument1 rdf:resource="#ChemCycle"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <Patient rdf:ID="Patient01">
+    <hasClinicalPath>
+      <ClinicalPath rdf:ID="CP_TestPatient01">
+        <hasPatient rdf:resource="#Patient01"/>
+      </ClinicalPath>
+    </hasClinicalPath>
+    <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >New Patient</hasName>
+  </Patient>
+  <swrl:Imp rdf:ID="HL12">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+            <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIIa"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#IrradiationCycleNumber"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#ChemCycleNumber"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:argument2 rdf:resource="#GlandBiopsyPositive"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="#MarrowBiopsyPositive"/>
+                        <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                        <swrl:argument1 rdf:resource="#p"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument1 rdf:resource="#p"/>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                            <swrl:argument2 rdf:resource="#LowFever"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL5">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument2 rdf:resource="#X-Ray"/>
+            <swrl:argument1 rdf:resource="#c"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:argument2 rdf:resource="#HT"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2 rdf:resource="#v1"/>
+                        <swrl:argument1 rdf:resource="#HT"/>
+                        <swrl:propertyPredicate rdf:resource="#hasValue"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:DatavaluedPropertyAtom>
+                                    <swrl:argument2 rdf:resource="#v2"/>
+                                    <swrl:propertyPredicate rdf:resource="#hasValue"/>
+                                    <swrl:argument1 rdf:resource="#Fe"/>
+                                  </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest>
+                                      <swrl:AtomList>
+                                        <rdf:rest>
+                                          <swrl:AtomList>
+                                            <rdf:first>
+                                              <swrl:DatavaluedPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="#hasValue"/>
+                                                <swrl:argument2>
+                                                  <swrl:Variable rdf:ID="v3"/>
+                                                </swrl:argument2>
+                                                <swrl:argument1 rdf:resource="#MCHb"/>
+                                              </swrl:DatavaluedPropertyAtom>
+                                            </rdf:first>
+                                            <rdf:rest>
+                                              <swrl:AtomList>
+                                                <rdf:first>
+                                                  <swrl:BuiltinAtom>
+                                                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                    <swrl:arguments>
+                                                      <rdf:List>
+                                                        <rdf:rest>
+                                                          <rdf:List>
+                                                            <rdf:first
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#int"
+                                                            >25</rdf:first>
+                                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                          </rdf:List>
+                                                        </rdf:rest>
+                                                        <rdf:first rdf:resource="#v3"/>
+                                                      </rdf:List>
+                                                    </swrl:arguments>
+                                                  </swrl:BuiltinAtom>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                  <swrl:AtomList>
+                                                    <rdf:rest>
+                                                      <swrl:AtomList>
+                                                        <rdf:first>
+                                                          <swrl:DatavaluedPropertyAtom>
+                                                            <swrl:argument1 rdf:resource="#X-Ray"/>
+                                                            <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                                                            <swrl:argument2
+                                                             rdf:datatype=
+                                                            "http://www.w3.org/2001/XMLSchema#int"
+                                                            >0</swrl:argument2>
+                                                          </swrl:DatavaluedPropertyAtom>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                      </swrl:AtomList>
+                                                    </rdf:rest>
+                                                    <rdf:first>
+                                                      <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                                                        <swrl:argument1 rdf:resource="#p"/>
+                                                        <swrl:argument2 rdf:resource="#c"/>
+                                                      </swrl:IndividualPropertyAtom>
+                                                    </rdf:first>
+                                                  </swrl:AtomList>
+                                                </rdf:rest>
+                                              </swrl:AtomList>
+                                            </rdf:rest>
+                                          </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                          <swrl:IndividualPropertyAtom>
+                                            <swrl:argument2 rdf:resource="#MCHb"/>
+                                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                                            <swrl:argument1 rdf:resource="#p"/>
+                                          </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                      </swrl:AtomList>
+                                    </rdf:rest>
+                                    <rdf:first>
+                                      <swrl:BuiltinAtom>
+                                        <swrl:arguments>
+                                          <rdf:List>
+                                            <rdf:rest>
+                                              <rdf:List>
+                                                <rdf:first rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >50</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                              </rdf:List>
+                                            </rdf:rest>
+                                            <rdf:first rdf:resource="#v2"/>
+                                          </rdf:List>
+                                        </swrl:arguments>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                      </swrl:BuiltinAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:argument1 rdf:resource="#p"/>
+                                <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                                <swrl:argument2 rdf:resource="#Fe"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                    >40</rdf:first>
+                                  </rdf:List>
+                                </rdf:rest>
+                                <rdf:first rdf:resource="#v1"/>
+                              </rdf:List>
+                            </swrl:arguments>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL19">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:argument2 rdf:resource="#PetScanPositive"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#p"/>
+                        <swrl:argument2 rdf:resource="#c"/>
+                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#AdvancedChemiotherapy"/>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument1 rdf:resource="#c"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <ClinicalPathStep rdf:ID="Cured">
+    <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Cured</hasJBPMProcess>
+  </ClinicalPathStep>
+  <ClinicalPathStep rdf:ID="InitialStep">
+    <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >InitialStep</hasJBPMProcess>
+    <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</hasOrder>
+  </ClinicalPathStep>
+  <swrl:Variable rdf:ID="r"/>
+  <swrl:Variable rdf:ID="y"/>
+  <PatientState rdf:ID="HighFever"/>
+  <swrl:Imp rdf:ID="HL4">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument2 rdf:resource="#BloodTest"/>
+            <swrl:argument1 rdf:resource="#c"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+                <swrl:argument1 rdf:resource="#p"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="#c"/>
+                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                        <swrl:argument1 rdf:resource="#p"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument1 rdf:resource="#BloodTest"/>
+                            <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >0</swrl:argument2>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#FluidGlands"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <PatientState rdf:ID="Sweating"/>
+  <swrl:Imp rdf:ID="HL11">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#GlandBiopsyPositive"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                        <swrl:argument2 rdf:resource="#MarrowBiopsyPositive"/>
+                        <swrl:argument1 rdf:resource="#p"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                            <swrl:argument2 rdf:resource="#HighFever"/>
+                            <swrl:argument1 rdf:resource="#p"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument1 rdf:resource="#p"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2 rdf:resource="#ChemCycleNumber"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#IrradiationCycleNumber"/>
+                    <swrl:argument1 rdf:resource="#p"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2>
+              <Diagnosis rdf:ID="HodgkinLemphomaStageIIIb"/>
+            </swrl:argument2>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <ClinicalPathStep rdf:ID="ComputerTomography">
+    <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ComputerTomography</hasJBPMProcess>
+    <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://localhost:8080/SemPathService/ComputerTomography.jsp</hasWebServiceURL>
+    <hasOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</hasOrder>
+    <hasRelevantState rdf:resource="#GlandsSize"/>
+  </ClinicalPathStep>
+  <swrl:Imp rdf:ID="HL1">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                <swrl:argument2 rdf:resource="#c"/>
+                <swrl:argument1 rdf:resource="#p"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument1 rdf:resource="#p"/>
+                            <swrl:argument2 rdf:resource="#z"/>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:DifferentIndividualsAtom>
+                                <swrl:argument1>
+                                  <swrl:Variable rdf:ID="x"/>
+                                </swrl:argument1>
+                                <swrl:argument2 rdf:resource="#y"/>
+                              </swrl:DifferentIndividualsAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:DifferentIndividualsAtom>
+                                    <swrl:argument2 rdf:resource="#z"/>
+                                    <swrl:argument1 rdf:resource="#y"/>
+                                  </swrl:DifferentIndividualsAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:DifferentIndividualsAtom>
+                                        <swrl:argument2 rdf:resource="#y"/>
+                                        <swrl:argument1 rdf:resource="#z"/>
+                                      </swrl:DifferentIndividualsAtom>
+                                    </rdf:first>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="#y"/>
+                        <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                        <swrl:argument1 rdf:resource="#p"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#x"/>
+                    <swrl:argument1 rdf:resource="#p"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+            <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL15">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument1 rdf:resource="#ChemCycle"/>
+                    <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                    <swrl:argument2 rdf:resource="#v1"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:BuiltinAtom>
+                                    <swrl:arguments>
+                                      <rdf:List>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:first rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#int"
+                                            >4000</rdf:first>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                        <rdf:first rdf:resource="#v3"/>
+                                      </rdf:List>
+                                    </swrl:arguments>
+                                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                  </swrl:BuiltinAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:BuiltinAtom>
+                                        <swrl:arguments>
+                                          <rdf:List>
+                                            <rdf:rest>
+                                              <rdf:List>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                <rdf:first rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#int"
+                                                >10000</rdf:first>
+                                              </rdf:List>
+                                            </rdf:rest>
+                                            <rdf:first rdf:resource="#v3"/>
+                                          </rdf:List>
+                                        </swrl:arguments>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                      </swrl:BuiltinAtom>
+                                    </rdf:first>
+                                    <rdf:rest>
+                                      <swrl:AtomList>
+                                        <rdf:first>
+                                          <swrl:IndividualPropertyAtom>
+                                            <swrl:argument1 rdf:resource="#p"/>
+                                            <swrl:argument2 rdf:resource="#c"/>
+                                            <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                                          </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      </swrl:AtomList>
+                                    </rdf:rest>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:DatavaluedPropertyAtom>
+                                <swrl:argument1 rdf:resource="#WhiteBloodCells"/>
+                                <swrl:argument2 rdf:resource="#v3"/>
+                                <swrl:propertyPredicate rdf:resource="#hasValue"/>
+                              </swrl:DatavaluedPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                            <swrl:argument2 rdf:resource="#WhiteBloodCells"/>
+                            <swrl:argument1 rdf:resource="#p"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:BuiltinAtom>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                        <swrl:arguments>
+                          <rdf:List>
+                            <rdf:rest>
+                              <rdf:List>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >3</rdf:first>
+                              </rdf:List>
+                            </rdf:rest>
+                            <rdf:first rdf:resource="#v1"/>
+                          </rdf:List>
+                        </swrl:arguments>
+                      </swrl:BuiltinAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#c"/>
+                <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+                <swrl:argument2 rdf:resource="#BloodTest"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#c"/>
+            <swrl:argument2 rdf:resource="#ChemCycle"/>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <ClinicalPathStep rdf:ID="OneWeekDelay">
+    <hasWebServiceURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://localhost:8080/SemPathService/OneWeekDelay.jsp</hasWebServiceURL>
+    <hasJBPMProcess rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OneWeekDelay</hasJBPMProcess>
+  </ClinicalPathStep>
+  <swrl:Imp rdf:ID="HL10">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument2 rdf:resource="#GlandBiopsyPositive"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument1 rdf:resource="#p"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument1 rdf:resource="#p"/>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                            <swrl:argument2 rdf:resource="#HighFever"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                        <swrl:argument2 rdf:resource="#MarrowBiopsyNegative"/>
+                        <swrl:argument1 rdf:resource="#p"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL14">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument1 rdf:resource="#c"/>
+            <swrl:argument2 rdf:resource="#OneWeekDelay"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+                <swrl:argument2 rdf:resource="#BloodTest"/>
+                <swrl:argument1 rdf:resource="#c"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+                <swrl:argument1 rdf:resource="#p"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                    <swrl:argument1 rdf:resource="#ChemCycle"/>
+                    <swrl:argument2 rdf:resource="#v1"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:BuiltinAtom>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                        <swrl:arguments>
+                          <rdf:List>
+                            <rdf:first rdf:resource="#v1"/>
+                            <rdf:rest>
+                              <rdf:List>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                                >3</rdf:first>
+                              </rdf:List>
+                            </rdf:rest>
+                          </rdf:List>
+                        </swrl:arguments>
+                      </swrl:BuiltinAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument1 rdf:resource="#p"/>
+                            <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                            <swrl:argument2 rdf:resource="#WhiteBloodCells"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:BuiltinAtom>
+                                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                    <swrl:arguments>
+                                      <rdf:List>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:first rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#float"
+                                            >10000.0</rdf:first>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                        <rdf:first rdf:resource="#v2"/>
+                                      </rdf:List>
+                                    </swrl:arguments>
+                                  </swrl:BuiltinAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:IndividualPropertyAtom>
+                                        <swrl:argument2 rdf:resource="#c"/>
+                                        <swrl:argument1 rdf:resource="#p"/>
+                                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                                      </swrl:IndividualPropertyAtom>
+                                    </rdf:first>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:DatavaluedPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="#hasValue"/>
+                                <swrl:argument1 rdf:resource="#WhiteBloodCells"/>
+                                <swrl:argument2 rdf:resource="#v2"/>
+                              </swrl:DatavaluedPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL6">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+            <swrl:argument1 rdf:resource="#p"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#HodgkinLemphoma"/>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument1 rdf:resource="#p"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                            >0</swrl:argument2>
+                            <swrl:argument1 rdf:resource="#ComputerTomography"/>
+                            <swrl:propertyPredicate rdf:resource="#hasOrder"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="#c"/>
+                        <swrl:argument1 rdf:resource="#p"/>
+                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:argument2 rdf:resource="#ShadowInChestArea"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#ComputerTomography"/>
+            <swrl:argument1 rdf:resource="#c"/>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="HL18">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="#hasPendingStep"/>
+            <swrl:argument2 rdf:resource="#Cured"/>
+            <swrl:argument1 rdf:resource="#c"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#p"/>
+            <swrl:classPredicate rdf:resource="#Patient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#hasPossibleDiagnosis"/>
+                <swrl:argument1 rdf:resource="#p"/>
+                <swrl:argument2 rdf:resource="#HodgkinLemphomaStageIIa"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="#hasClinicalPath"/>
+                        <swrl:argument2 rdf:resource="#c"/>
+                        <swrl:argument1 rdf:resource="#p"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#p"/>
+                    <swrl:propertyPredicate rdf:resource="#hasPatientState"/>
+                    <swrl:argument2 rdf:resource="#PetScanNegative"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->

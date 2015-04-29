@@ -1,0 +1,4 @@
+-- listing properties --
+sempath.xsd.exam.ExamRequest=sempath.xsd.exam.ExamRequestDescriptor
+sempath.xsd.exam.ExamRequestComplexType=sempath.xsd.exam.ExamRequestComplexTy...
+sempath.xsd.exam.State=sempath.xsd.exam.StateDescriptor

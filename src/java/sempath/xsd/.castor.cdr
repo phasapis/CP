@@ -1,0 +1,15 @@
+-- listing properties --
+sempath.xsd.PatientInfoComplexType=sempath.xsd.PatientInfoComplexTypeDes...
+sempath.xsd.StepComplexType=sempath.xsd.StepComplexTypeDescriptor
+sempath.xsd.FinishedSteps=sempath.xsd.FinishedStepsDescriptor
+sempath.xsd.StateComplexType=sempath.xsd.StateComplexTypeDescriptor
+sempath.xsd.PendingSteps=sempath.xsd.PendingStepsDescriptor
+sempath.xsd.States=sempath.xsd.StatesDescriptor
+sempath.xsd.State=sempath.xsd.StateDescriptor
+sempath.xsd.Step=sempath.xsd.StepDescriptor
+sempath.xsd.DiagnonsisType=sempath.xsd.DiagnonsisTypeDescriptor
+sempath.xsd.PatientInfo=sempath.xsd.PatientInfoDescriptor
+sempath.xsd.SemPathInfo=sempath.xsd.SemPathInfoDescriptor
+sempath.xsd.Patient=sempath.xsd.PatientDescriptor
+sempath.xsd.DiagnosisList=sempath.xsd.DiagnosisListDescriptor
+sempath.xsd.Diagnosis=sempath.xsd.DiagnosisDescriptor
