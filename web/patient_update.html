@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Details - Carepaths</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.min.css">
+
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+
+        <div class="brand"></div>
+
+        <div class="profile">
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown">
+                    Logged in: username <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ui-sref="home" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="col-md-3">
+
+            <nav>
+                <ul>
+                    <li class="title">Menu</li>
+                    <li><a><span class="glyphicon glyphicon-inbox"></span> Dashboard</a></li>
+                    <li><a class="active"><span class="glyphicon glyphicon-th-list"></span> Patients Directory</a></li>
+                    <li><a class="action"><span class="glyphicon glyphicon-plus"></span> Add Patient</a></li>
+                </ul>
+
+                <ul class="patient">
+                    <li class="title">PATIENT DATA</li>
+                    <li><a><span class="glyphicon glyphicon-user"></span> Patient Profile</a></li>
+                    <li><a><span class="glyphicon glyphicon-ok"></span> 01.07.2014</a></li>
+                    <li><a><span class="glyphicon glyphicon-ok"></span> 02.10.2014</a></li>
+                    <li><a><span class="glyphicon glyphicon-ok"></span> 02.12.2014</a></li>
+                    <li><a><span class="glyphicon glyphicon-time"></span> 22.11.2015</a></li>
+                    <li><a class="action"><span class="glyphicon glyphicon-plus"></span> Log Visit</a></li>
+                </ul>
+
+                <ul class="legend">
+                    <li><span class="glyphicon glyphicon-ok"></span> Includes lab results</li>
+                    <li><span class="glyphicon glyphicon-time"></span> Pending lab results</li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+            <!-- NOTIFICATIONS -->
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                Patient has been successfully addded.
+            </div>
+
+            <h3>Add New Patient<br>
+                <small>Fill in the required data below to add a new patient</small>
+            </h3>
+
+            <hr>
+
+
+            <div role="tabpanel">
+
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#personal" role="tab" data-toggle="tab">Personal
+                        Information</a></li>
+                    <li role="presentation"><a href="#medical" role="tab" data-toggle="tab">Medical History</a></li>
+                    <li role="presentation"><a href="#obstetrical" role="tab" data-toggle="tab">Obstetrical History</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- PERSONAL -->
+                    <div role="tabpanel" class="tab-pane active" id="personal">
+                        <br>
+
+                        <form action="#" method="post" class="form-horizontal">
+
+                            <fieldset>
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label for="firstname">First Name</label>
+                                        <input class="form-control" id="firstName" name="firstName" required="true"
+                                               size="20" type="text"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="lastname">Last Name</label>
+                                        <input class="form-control" id="lastName" name="lastName" required="true"
+                                               size="20" type="text"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="lastname">Father's Name</label>
+                                        <input class="form-control" id="fathersName" name="fathersName" required="true"
+                                               size="20" type="text"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-sm-12">
+                                    <label class="control-label">Date of birth</label>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="birthdayDay" required>
+                                                <option>--</option>
+                                                <option>1</option>
+                                            </select>
+
+                                            <p class="help-block">Day</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="birthdayMonth" required>
+                                                <option>--</option>
+                                                <option>1</option>
+                                            </select>
+
+                                            <p class="help-block">Month</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="birthdayYear" required>
+                                                <option>--</option>
+                                                <option>1980</option>
+                                            </select>
+
+                                            <p class="help-block">Year</p>
+                                        </div>
+
+                                        <div class="col-sm-9">
+                                            <label for="occupation">Occupation</label>
+                                            <input class="form-control" id="occupation" name="occupation" size="30"
+                                                   type="text"/>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <label class="control-label">Gender</label>
+                                            <select type="text" class="form-control" id="gender" required>
+                                                <option>--</option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label for="husbandFirstName">Husband's First Name</label>
+                                        <input class="form-control" id="husbandFirstName" name="husbandFirstName"
+                                               required="true" size="20" type="text"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="husbandLastName">Husband's Last Name</label>
+                                        <input class="form-control" id="husbandLastName" name="husbandLastName"
+                                               required="true" size="20" type="text"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="husbandOccupation">Husband's Occupation</label>
+                                        <input class="form-control" id="husbandOccupation" name="husbandOccupation"
+                                               required="true" size="20" type="text"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-sm-12">
+                                    <label class="control-label">Address</label>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="addressStreetName" name="addressStreet"
+                                                   required="true" size="20" type="text"/>
+
+                                            <p class="help-block">Street</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input class="form-control" id="addressNumber" name="addresstNumber"
+                                                   required="true" size="20" type="text"/>
+
+                                            <p class="help-block">Number</p>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label for="user_password">Region</label>
+                                            <input class="form-control" id="region" name="region" size="30" type="text"/>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <label for="user_password">Postal Code</label>
+                                            <input class="form-control" id="postal" name="postal" size="30"
+                                                   type="text"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-4">
+                                            <label for="homeNumber">Home Number</label>
+                                            <input class="form-control" id="homeNumber" name="homeNumber"
+                                                   required="true" size="20" type="text"/>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label for="workNumber">Work Number</label>
+                                            <input class="form-control" id="workNumber" name="workNumber"
+                                                   required="true" size="20" type="text"/>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="mobileNumber">Mobile Number</label>
+                                            <input class="form-control" id="mobileNumber" name="mobileNumber"
+                                                   required="true" size="20" type="text"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <button type="button" class="btn btn-warning">Update Personal Information</button>
+
+                        </form>
+
+
+
+                    </div>
+
+                    <!-- MEDICAL -->
+                    <div role="tabpanel" class="tab-pane" id="medical">
+
+                        <br>
+
+                        <form action="#" method="post" class="form-horizontal">
+
+                            <table class="table table-hover table-condensed">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-1">#</th>
+                                    <th>Question</th>
+                                    <th class="col-md-1">You</th>
+                                    <th class="col-md-1">Family</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Headaches or nervous system problems</td>
+                                    <td><input type="checkbox" id="q1_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q1_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Problem with thyroid</td>
+                                    <td><input type="checkbox" id="q2_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q2_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Heart disease</td>
+                                    <td><input type="checkbox" id="q3_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q3_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Respiratory problems (asthma, bronchitis, etc)</td>
+                                    <td><input type="checkbox" id="q4_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q4_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Jaundice, hepatitis, liver problems</td>
+                                    <td><input type="checkbox" id="q5_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q5_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Problems with the stomach or intestines</td>
+                                    <td><input type="checkbox" id="q6_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q6_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>Problems with kidney or bladder</td>
+                                    <td><input type="checkbox" id="q7_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q7_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>Sexually transmitted diseases</td>
+                                    <td><input type="checkbox" id="q8_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q8_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td>Anemia or problems with blood</td>
+                                    <td><input type="checkbox" id="q9_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q9_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td>Diabetes</td>
+                                    <td><input type="checkbox" id="q10_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q10_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td>Breast cancer</td>
+                                    <td><input type="checkbox" id="q11_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q11_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td>Genital tract cancer</td>
+                                    <td><input type="checkbox" id="q12_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q12_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13</th>
+                                    <td>Cancer in another organ</td>
+                                    <td><input type="checkbox" id="q13_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q13_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">14</th>
+                                    <td>Genetically transferred diseases (thalassemia, haemophilia, etc)</td>
+                                    <td><input type="checkbox" id="q14_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q14_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">15</th>
+                                    <td>Allergy to foods or drugs</td>
+                                    <td><input type="checkbox" id="q15_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q15_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">16</th>
+                                    <td>Have you ever done a blood transfusion?</td>
+                                    <td><input type="checkbox" id="q16_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q16_F" value="1"/></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">17</th>
+                                    <td>Any other medical problems in addition to the above?</td>
+                                    <td><input type="checkbox" id="q17_Y" value="1"/></td>
+                                    <td><input type="checkbox" id="q17_F" value="1"/></td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+
+                            <hr>
+
+                            <fieldset>
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label for="menstrualStart">How old were you when you started having menstrual
+                                            periods?</label>
+                                        <select type="text" class="form-control" id="menstrualStart" required>
+                                            <option>--</option>
+                                            <option>Younger than 10</option>
+                                            <option>10-12 years old</option>
+                                            <option>13-15 years old</option>
+                                            <option>16 or older</option>
+                                            <option>Don’t Know</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="menstrualGap">How many days are/were there between menstrual
+                                            periods?</label>
+                                        <input class="form-control" id="menstrualGap" required="true" size="20"
+                                               type="text"/>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="menstrualRegularity">Between the ages of 18 and 40, please describe
+                                            your menstrual period</label>
+                                        <select type="text" class="form-control" id="menstrualRegularity" required>
+                                            <option>--</option>
+                                            <option>Nearly always regular</option>
+                                            <option>Fairly Regular</option>
+                                            <option>Irregular</option>
+                                            <option>Don’t Know</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-sm-12">
+                                    <label class="control-label">When was your last period</label>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="lastPeriodDay" required>
+                                                <option>--</option>
+                                                <option>1</option>
+                                            </select>
+
+                                            <p class="help-block">Day</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="lastPeriodMonth" required>
+                                                <option>--</option>
+                                                <option>1</option>
+                                            </select>
+
+                                            <p class="help-block">Month</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="lastPeriodYear" required>
+                                                <option>--</option>
+                                                <option>1980</option>
+                                            </select>
+
+                                            <p class="help-block">Year</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label for="contraception">Which is your prefered contraceptive method?</label>
+                                        <select type="text" class="form-control" id="contraception" required>
+                                            <option>--</option>
+                                            <option>None</option>
+                                            <option>Glomeruli</option>
+                                            <option>Pill</option>
+                                            <option>Condom</option>
+                                            <option>Withdrawal</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="mammogram">Have you ever had a mammogram?</label>
+                                        <select type="text" class="form-control" id="mammogram" required>
+                                            <option>--</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="herpes">Have you ever had herpes?</label>
+                                        <select type="text" class="form-control" id="herpes" required>
+                                            <option>--</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <label for="warts">Have you ever had warts?</label>
+                                        <select type="text" class="form-control" id="warts" required>
+                                            <option>--</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="partnerHerpes">Did you have a partner that had herpes?</label>
+                                        <select type="text" class="form-control" id="partnerHerpes" required>
+                                            <option>--</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label for="partnerWarts">Did you have a partner that had warts?</label>
+                                        <select type="text" class="form-control" id="partnerWarts" required>
+                                            <option>--</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-sm-12">
+                                    <label class="control-label">When did you last have a test Pap?</label>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="papDay" required>
+                                                <option>--</option>
+                                                <option>1</option>
+                                            </select>
+
+                                            <p class="help-block">Day</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="papMonth" required>
+                                                <option>--</option>
+                                                <option>1</option>
+                                            </select>
+
+                                            <p class="help-block">Month</p>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <select type="text" class="form-control" id="papYear" required>
+                                                <option>--</option>
+                                                <option>1980</option>
+                                            </select>
+
+                                            <p class="help-block">Year</p>
+                                        </div>
+
+
+                                        <div class="col-sm-4">
+                                            <label for="papResult">Was the result normal?</label>
+                                            <select type="text" class="form-control" id="papResult" required>
+                                                <option>--</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="papPathological">Have you ever had a pathological test
+                                                Pap?</label>
+                                            <select type="text" class="form-control" id="papPathological" required>
+                                                <option>--</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="smoking">Do you regularly smoke?</label>
+                                            <select type="text" class="form-control" id="smoking" required>
+                                                <option>--</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label for="medincines">Fill in medicines that you have been taking for long
+                                                time or that you are currenlty taking</label>
+                                            <textarea class="form-control" id="medicines" name="medicines"
+                                                      rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="bg-warning" style="padding:16px; border-radius:6px">
+
+                                        <p class="text-warning">Fill in this data if you are in menopause</p>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <label for="menopauseStart">How old were you when your menstrual periods
+                                                    stopped?</label>
+                                                <select type="text" class="form-control" id="menopauseStart" required>
+                                                    <option>--</option>
+                                                    <option>Younger than 20</option>
+                                                    <option>20-29 years old</option>
+                                                    <option>30-39 years old</option>
+                                                    <option>40-44 years old</option>
+                                                    <option>45-49 years old</option>
+                                                    <option>50-54 years old</option>
+                                                    <option>55-59 years old</option>
+                                                    <option>60 or older</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <label>Do you take any of the following medicines while in menopause?</label>
+                                        <table class="table table-hover table-condensed">
+                                            <thead>
+                                            <tr>
+                                                <th class="col-md-1">#</th>
+                                                <th class="col-md-9">Medicine</th>
+                                                <th class="col-md-1"></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Estrogen</td>
+                                                <td><input type="checkbox" id="m1" value="1"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Progesterone</td>
+                                                <td><input type="checkbox" id="m2" value="1"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Calcium</td>
+                                                <td><input type="checkbox" id="m3" value="1"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Anxiolytics</td>
+                                                <td><input type="checkbox" id="m4" value="1"/></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                        <label>Select any symptoms you may notice while in menipause.</label>
+                                        <table class="table table-hover table-condensed">
+                                            <thead>
+                                            <tr>
+                                                <th class="col-md-1">#</th>
+                                                <th class="col-md-9">Symptom</th>
+                                                <th class="col-md-1"></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Vaginal dryness</td>
+                                                <td><input type="checkbox" id="s1" value="1"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Insomnia</td>
+                                                <td><input type="checkbox" id="s2" value="1"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Swelling</td>
+                                                <td><input type="checkbox" id="s3" value="1"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Psychological mood change</td>
+                                                <td><input type="checkbox" id="s4" value="1"/></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+
+
+                                    </div>
+                                    <hr>
+                                    <div class="bg-info" style="padding:16px; border-radius:6px">
+
+                                        <p class="text-primary">Fill in any medical conditions for which you have been
+                                            hospitalized.</p>
+                                        <table class="table hospital">
+                                            <thead>
+                                            <th>Disease</th>
+                                            <th>Surgery</th>
+                                            <th>Hospital</th>
+                                            <th>Year</th>
+                                            <th></th>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><input type="text" id="hDisease" value="" class="form-control"/>
+                                                </td>
+                                                <td><input type="text" id="hSurgery" value="" class="form-control"/>
+                                                </td>
+                                                <td><input type="text" id="hHospital" value="" class="form-control"/>
+                                                </td>
+                                                <td><input type="text" id="hYear" value="" class="form-control"/></td>
+                                                <td><a href="#" class="remove-row"><span
+                                                        class=" glyphicon glyphicon-remove"></span></a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div><a href="#" id="add-row"><span class="glyphicon glyphicon-plus"></span> Add
+                                            disease</a></div>
+
+                                    </div>
+
+                            </fieldset>
+
+                            <button type="button" class="btn btn-warning">Update Medical History</button>
+
+                        </form>
+
+                    </div>
+
+                    <!-- OBSTETRICAL -->
+                    <div role="tabpanel" class="tab-pane" id="obstetrical">
+
+                        <form action="#" method="post" class="form-horizontal">
+                            <br>
+                            <fieldset>
+                                <div class="form-group">
+                                    <div class="col-sm-6">
+                                        <label for="miscarriages">Number of miscarriages</label>
+                                        <select type="text" class="form-control" id="miscarriages" required>
+                                            <option>--</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>More than 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="abortions">Number of abortions</label>
+                                        <select type="text" class="form-control" id="abortions" required>
+                                            <option>--</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>More than 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="bg-warning" style="padding:16px; border-radius:6px">
+
+                                    <p class="text-warning">Νormal deliveries</p>
+                                    <table class="table deliveryNormal">
+                                        <thead>
+                                        <th>Year</th>
+                                        <th>Gender</th>
+                                        <th>Hospital</th>
+                                        <th></th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text" id="dNYear" value="" class="form-control"/></td>
+                                            <td>
+                                                <select type="text" class="form-control" id="dNGender" required>
+                                                    <option>--</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </td>
+
+                                            <td><input type="text" id="dNHospital" value="" class="form-control"/></td>
+                                            <td><a href="#" class="remove-row"><span
+                                                    class=" glyphicon glyphicon-remove"></span></a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div><a href="#" id="add-row-deliveryNormal"><span
+                                            class="glyphicon glyphicon-plus"></span> Add normal delivery</a></div>
+
+                                </div>
+
+                                <hr>
+
+                                <div class="bg-warning" style="padding:16px; border-radius:6px">
+
+                                    <p class="text-warning">Cesarean deliveries</p>
+                                    <table class="table deliveryCesarean">
+                                        <thead>
+                                        <th>Year</th>
+                                        <th>Gender</th>
+                                        <th>Hospital</th>
+                                        <th></th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text" id="dCYear" value="" class="form-control"/></td>
+                                            <td>
+                                                <select type="text" class="form-control" id="dCGender" required>
+                                                    <option>--</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="text" id="dCHospital" value="" class="form-control"/></td>
+                                            <td><a href="#" class="remove-row"><span
+                                                    class=" glyphicon glyphicon-remove"></span></a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div><a href="#" id="add-row-deliveryCesarean"><span
+                                            class="glyphicon glyphicon-plus"></span> Add cesarean delivery</a></div>
+
+                                </div>
+
+                                <hr>
+
+                                <div class="bg-warning" style="padding:16px; border-radius:6px">
+
+                                    <p class="text-warning">Premature deliveries</p>
+                                    <table class="table deliveryPremature">
+                                        <thead>
+                                        <th>Year</th>
+                                        <th>Gender</th>
+                                        <th>Hospital</th>
+                                        <th></th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text" id="dPYear" value="" class="form-control"/></td>
+                                            <td>
+                                                <select type="text" class="form-control" id="dPGender" required>
+                                                    <option>--</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="text" id="dPHospital" value="" class="form-control"/></td>
+                                            <td><a href="#" class="remove-row"><span
+                                                    class=" glyphicon glyphicon-remove"></span></a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div><a href="#" id="add-row-deliveryPremature"><span
+                                            class="glyphicon glyphicon-plus"></span> Add premature delivery</a></div>
+
+                                </div>
+
+                                <hr>
+
+                                <div class="bg-warning" style="padding:16px; border-radius:6px">
+
+                                    <p class="text-warning">Ectopic deliveries</p>
+                                    <table class="table deliveryEctopic">
+                                        <thead>
+                                        <th>Year</th>
+                                        <th>Gender</th>
+                                        <th>Hospital</th>
+                                        <th></th>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text" id="dEYear" value="" class="form-control"/></td>
+                                            <td>
+                                                <select type="text" class="form-control" id="dEGender" required>
+                                                    <option>--</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </td>
+                                            <td><input type="text" id="dEHospital" value="" class="form-control"/></td>
+                                            <td><a href="#" class="remove-row"><span
+                                                    class=" glyphicon glyphicon-remove"></span></a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <div><a href="#" id="add-row-deliveryEctopic"><span
+                                            class="glyphicon glyphicon-plus"></span> Add ectopic delivery</a></div>
+
+                                </div>
+
+                            </fieldset>
+
+                            <br>
+
+                            <button type="button" class="btn btn-warning">Update Obstetrical History</button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <nav class="cdss">
+                <ul>
+                    <li class="title">CDSS</li>
+
+                    <div class="bs-callout bs-callout-alert">
+                        <h4>No CDSS recommendations</h4>
+
+                        <p>Take a close look at this area for future CDSS recommendations.</p>
+                    </div>
+
+                    <div class="bs-callout bs-callout-danger">
+                        <h4>Add this step</h4>
+
+                        <p>New Blood Lab Tests</p>
+
+                        <p>
+                            <button type="button" class="btn btn-default btn-xs">Pre-fill next step</button>
+                            <button type="button" class="btn btn-default btn-xs">Ingore</button>
+                        </p>
+                    </div>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="col-md-12">
+            <div><h6>&copy; Carepaths Dashboard</h6></div>
+
+            <div>All requirements are fulfilled in practice to ensure patient confidentiality.<br>Even if you said there
+                was no problem and we can contact you by telephone, never refer to third parties from which the call
+                originates.<br>You must also know that it is given to other results concerning your health unless.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>

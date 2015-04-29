@@ -1,0 +1,29 @@
+<h1>Users</h1>
+<p class="lead">User List</p>
+
+<table class="table table-hover table-striped table-bordered">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Username</td>
+        <td>E-mail</td>
+        <td>Password</td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr ng-repeat="user in users track by $index">
+        <td>{{ user.id }}</td>
+        <td>{{ user.firstname }}</td>
+        <td>{{ user.lastname }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.password}}</td>
+        <td><center><a ng-click="deleteUser(user)" class="btn btn-xs btn-danger">Delete</a></center></td>
+    </tr>
+
+    </tbody>
+</table>

@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 80px;
+    border-bottom: 1px solid #f1f1f1;
+    border-top:4px solid #186392;
+    background: rgba(33, 133, 197, 0.9); //rgba(33, 133, 197, 0.9);
+    //background: #2185C5;
+    z-index: 1000;
+}
+
+header .brand {
+    margin: 0;
+    padding: 0;
+    margin-left:50px;
+    float: left;
+    height: 70px;
+    width: 180px;
+    background: url('img/CAREPATHS_LOGO.png') no-repeat center center;
+    background-size: 160px;
+}
+
+header .profile {
+    margin: 0;
+    margin-top: 20px;
+    margin-right:40px;
+    float: right;
+}
+
+header .profile ul {
+    //height: 100px;
+}
+
+header a {
+    color: #eee;
+}
+
+header .navbar-nav > li > a:hover{
+	background:none;
+}
+
+main {
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+main nav {
+    position: fixed;
+}
+
+main small {
+    color: #7a7f82;
+}
+
+main form{
+	//width:400px;
+}
+
+footer {
+    margin: 0 auto;
+    //position: relative;
+    //bottom: 0;
+    border-top: 1px solid #eee;
+    margin-top: 100px;
+    margin-bottom:50px;
+    padding-top: 20px;
+    color: #bcbcbc;
+    text-align: center;
+    font-size: 12px;
+}
+
+nav.cdss{
+    width:240px;
+}
+
+nav.cdss ul li.title{
+    padding:0;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 30px;
+    padding: 0;
+}
+
+nav ul .glyphicon{
+    opacity:0.6;
+    padding-right:5px;
+}
+
+nav ul.patient{
+    //border-top:1px solid #eee;
+    margin-top:20px;
+    padding-top: 20px;
+}
+
+nav ul.legend{
+    margin-top:40px;
+    opacity:0.3;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 0 0 20px;
+}
+
+nav ul li.title {
+    padding: 0 0 10px 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    color: #ccc;
+    border-left: 2px solid #ffffff;
+}
+
+nav ul li .active {
+    border-left: 2px solid #767676;
+}
+
+nav ul li .action {
+    color: #C28888;
+}
+
+nav ul li a {
+    padding: 0 0 0 20px;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+    border-left: 2px solid #ffffff;
+}
+
+nav ul li a:hover {
+    border-left: 2px solid #767676;
+    text-decoration: none;
+}
+
+nav ul .submenu li a {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #DC9E84;
+    border: none;
+}
+
+nav ul .submenu li a:hover {
+    text-decoration: none;
+    color: #E27244;
+}
+
+#login {
+    padding-top: 100px;
+	text-align: center;
+}
+#login .form-wrap {
+    width: 380px;
+    margin: 0 auto;
+}
+
+#login h1 {
+    color: #61A4CF;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#login .form-group {
+    margin-bottom: 20px;
+}
+

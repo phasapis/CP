@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Details - Carepaths</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.min.css">
+
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+
+        <div class="brand"></div>
+
+        <div class="profile">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>Link 1</a></li>
+                <li><a>Link 2</a></li>
+                <li><a>Link 3</a></li>
+            </ul>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="col-md-3">
+
+            <nav>
+                <ul>
+                    <li class="title">Menu</li>
+                    <li><a><span class="glyphicon glyphicon-inbox"></span> Dashboard</a></li>
+                    <li><a class="active"><span class="glyphicon glyphicon-th-list"></span> Patients Directory</a></li>
+                    <li><a class="action"><span class="glyphicon glyphicon-plus"></span> Add Patient</a></li>
+                </ul>
+
+                <ul class="patient">
+                    <li class="title">PATIENT DATA</li>
+                    <li><a><span class="glyphicon glyphicon-user"></span> Patient Profile</a></li>
+                    <li><a><span class="glyphicon glyphicon-ok"></span> 01.07.2014</a></li>
+                    <li><a><span class="glyphicon glyphicon-ok"></span> 02.10.2014</a></li>
+                    <li><a><span class="glyphicon glyphicon-ok"></span> 02.12.2014</a></li>
+                    <li><a><span class="glyphicon glyphicon-time"></span> 22.11.2015</a></li>
+                    <li><a class="action"><span class="glyphicon glyphicon-plus"></span> Log Visit</a></li>
+                </ul>
+
+                <ul class="legend">
+                    <li><span class="glyphicon glyphicon-ok"></span> Includes lab results</li>
+                    <li><span class="glyphicon glyphicon-time"></span> Pending lab results</li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+
+        <div class="col-md-6">
+
+            <h3>Patients Directory<br>
+            <small>List of patients</small></h3>
+
+            <hr>
+
+            <button type="button" class="btn btn-danger btn-sm">Add Patient</button>
+
+            <div class="btn-group">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle btn-sm" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                        Sort: Alphabetically
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last updated</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pending status</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Last Visit</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr class="active">
+                    <th scope="row">8</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Discharged</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+                <tr class="active">
+                    <th scope="row">7</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Discharged</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+                <tr class="warning">
+                    <th scope="row">6</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Pending</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+                <tr class="warning">
+                    <th scope="row">5</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Pending</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+                <tr class="active">
+                    <th scope="row">4</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Discharged</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+                <tr class="active">
+                    <th scope="row">3</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Discharged</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+                <tr class="active">
+                    <th scope="row">2</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Discharged</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+                <tr class="active">
+                    <th scope="row">1</th>
+                    <td>George Papadopoulos</td>
+                    <td>22.02.2014</td>
+                    <td>Discharged</td>
+                    <td><button type="button" class="btn btn-primary btn-xs pull-right">View Profile</button></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <ul class="pagination">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+
+        </div>
+
+        <div class="col-md-3">
+
+            <nav class="cdss">
+                <ul>
+                    <li class="title">CDSS</li>
+
+                    <div class="bs-callout bs-callout-alert">
+                        <h4>No CDSS recommendations</h4>
+                        <p>Take a close look at this area for future CDSS recommendations.</p>
+                    </div>
+
+                    <div class="bs-callout bs-callout-danger">
+                        <h4>Add this step</h4>
+                        <p>New Blood Lab Tests</p>
+                        <p>
+                            <button type="button" class="btn btn-default btn-xs">Pre-fill next step</button>
+                            <button type="button" class="btn btn-default btn-xs">Ingore</button>
+                        </p>
+                    </div>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="col-md-12">
+            <div><h6>&copy; Carepaths Dashboard</h6></div>
+
+            <div>All requirements are fulfilled in practice to ensure patient confidentiality.<br>Even if you said there was no problem and we can contact you by telephone, never refer to third parties from which the call originates.<br>You must also know that it is given to other results concerning your health unless.</div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
